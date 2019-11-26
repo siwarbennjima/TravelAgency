@@ -1,4 +1,4 @@
-package com.ditraacademy.travelagency.core;
+package com.ditraacademy.travelagency.core.user;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

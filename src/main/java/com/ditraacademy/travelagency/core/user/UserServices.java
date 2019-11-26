@@ -1,4 +1,4 @@
-package com.ditraacademy.travelagency.core;
+package com.ditraacademy.travelagency.core.user;
 
 
 import Utils.ErrorResponseModel;
@@ -29,6 +29,7 @@ public class UserServices {
 
         if (user.getAge() < 0)
             return  new ResponseEntity<>(new ErrorResponseModel("wrong user age"), HttpStatus.BAD_REQUEST) ;
+
 
        user = userRepository.save(user);
        return new ResponseEntity<>(user,HttpStatus.OK);

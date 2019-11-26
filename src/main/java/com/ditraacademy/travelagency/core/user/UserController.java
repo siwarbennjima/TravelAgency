@@ -1,4 +1,4 @@
-package com.ditraacademy.travelagency.core;
+package com.ditraacademy.travelagency.core.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -13,8 +13,8 @@ public class UserController {
     UserServices userServices;
 
     @PostMapping("/user")
-    public void adduser(@RequestBody User user){
-        userServices.addUser(user);
+    public ResponseEntity<?> adduser(@RequestBody User user){
+        return userServices.addUser(user);
     }
 
     @GetMapping("/users")
